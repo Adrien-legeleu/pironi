@@ -96,7 +96,7 @@ export function QuoteFormSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="max-w-3xl mx-auto bg-white rounded-[2rem] p-8 md:p-12 shadow-xl"
+          className="max-w-3xl mx-auto bg-white rounded-[4rem] p-8 md:p-12 shadow-2xl shadow-black/10 "
         >
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
@@ -105,7 +105,7 @@ export function QuoteFormSection() {
                 <Input
                   id="name"
                   placeholder="Votre nom"
-                  className="bg-pironi-cream border-pironi-muted rounded-[1.2rem] h-12 focus-visible:ring-pironi-yellow"
+                  className="bg-pironi-cream shadow-black/5 shadow-xl border-pironi-muted rounded-[1.2rem] h-12 focus-visible:ring-pironi-yellow"
                   {...form.register("name")}
                 />
                 {form.formState.errors.name && (
@@ -119,7 +119,7 @@ export function QuoteFormSection() {
                   id="email"
                   type="email"
                   placeholder="votre@email.com"
-                  className="bg-pironi-cream border-pironi-muted rounded-[1.2rem] h-12 focus-visible:ring-pironi-yellow"
+                  className="bg-pironi-cream shadow-black/5 shadow-xl border-pironi-muted rounded-[1.2rem] h-12 focus-visible:ring-pironi-yellow"
                   {...form.register("email")}
                 />
                 {form.formState.errors.email && (
@@ -135,7 +135,7 @@ export function QuoteFormSection() {
                   id="phone"
                   type="tel"
                   placeholder="06 12 34 56 78"
-                  className="bg-pironi-cream border-pironi-muted rounded-[1.2rem] h-12 focus-visible:ring-pironi-yellow"
+                  className="bg-pironi-cream border-pironi-muted shadow-black/5 shadow-xl rounded-[1.2rem] h-12 focus-visible:ring-pironi-yellow"
                   {...form.register("phone")}
                 />
                 {form.formState.errors.phone && (
@@ -149,7 +149,7 @@ export function QuoteFormSection() {
                   onValueChange={(value) => form.setValue("serviceType", value)}
                   defaultValue={form.getValues("serviceType")}
                 >
-                  <SelectTrigger className="bg-pironi-cream border-pironi-muted rounded-[1.2rem] h-12 focus:ring-pironi-yellow">
+                  <SelectTrigger className="bg-pironi-cream border-pironi-muted shadow-black/5 shadow-xl rounded-[1.2rem] h-12 focus:ring-pironi-yellow">
                     <SelectValue placeholder="Sélectionnez un service" />
                   </SelectTrigger>
                   <SelectContent>
@@ -169,7 +169,7 @@ export function QuoteFormSection() {
               <Textarea
                 id="message"
                 placeholder="Lieux, dates, volumes, type de marchandise, contraintes..."
-                className="bg-pironi-cream border-pironi-muted rounded-[1.2rem] min-h-[120px] focus-visible:ring-pironi-yellow resize-none"
+                className="bg-pironi-cream border-pironi-muted shadow-black/5 shadow-xl rounded-[1.8rem] min-h-[120px] focus-visible:ring-pironi-yellow resize-none"
                 {...form.register("message")}
               />
               {form.formState.errors.message && (

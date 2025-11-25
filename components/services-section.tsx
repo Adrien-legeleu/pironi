@@ -61,7 +61,7 @@ export function ServicesSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -6 }}
             >
-              <Card className="h-full border-none shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-[2rem] overflow-hidden bg-white flex flex-col">
+              <Card className="h-full border-none shadow-2xl shadow-black/10  hover:shadow-xl transition-shadow duration-300 rounded-[3rem] overflow-hidden bg-white flex flex-col">
                 <CardHeader className="pb-4">
                   <div className="w-14 h-14 bg-pironi-cream rounded-2xl flex items-center justify-center mb-6 text-pironi-yellow-dark">
                     <service.icon className="h-8 w-8" />

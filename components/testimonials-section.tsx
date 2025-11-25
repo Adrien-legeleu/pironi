@@ -56,7 +56,7 @@ export function TestimonialsSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -6 }}
             >
-              <Card className="h-full border-none shadow-lg bg-pironi-cream/30 rounded-[2rem] relative overflow-visible">
+              <Card className="h-full border-none shadow-2xl shadow-black/10 bg-pironi-cream/30 rounded-[3rem] relative overflow-visible">
                 <div className="absolute -top-4 -left-2 text-pironi-yellow/20">
                   <Quote className="h-16 w-16 rotate-180" />
                 </div>

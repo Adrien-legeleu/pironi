@@ -30,7 +30,7 @@ export function ValuesSection() {
               className="flex gap-6"
             >
               <div className="flex-shrink-0">
-                <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center backdrop-blur-sm">
+                <div className="w-16 h-16 bg-white/10 rounded-[1.7rem] flex items-center justify-center backdrop-blur-sm">
                   <Clock className="h-8 w-8 text-pironi-yellow" />
                 </div>
               </div>
@@ -51,7 +51,7 @@ export function ValuesSection() {
               className="flex gap-6"
             >
               <div className="flex-shrink-0">
-                <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center backdrop-blur-sm">
+                <div className="w-16 h-16 bg-white/10 rounded-[1.7rem] flex items-center justify-center backdrop-blur-sm">
                   <ShieldCheck className="h-8 w-8 text-pironi-yellow" />
                 </div>
               </div>
@@ -76,7 +76,7 @@ export function ValuesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-white p-8 rounded-[2rem] shadow-lg flex items-start gap-6 hover:shadow-xl transition-shadow"
+              className="bg-white p-8 rounded-[3rem] shadow-2xl shadow-black/10 flex items-start gap-6 hover:shadow-xl transition-shadow"
             >
               <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
                 <Leaf className="h-7 w-7 text-green-600" />
@@ -94,7 +94,7 @@ export function ValuesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-white p-8 rounded-[2rem] shadow-lg flex items-start gap-6 hover:shadow-xl transition-shadow"
+              className="bg-white p-8 rounded-[3rem] shadow-2xl shadow-black/10 flex items-start gap-6 hover:shadow-xl transition-shadow"
             >
               <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
                 <Lock className="h-7 w-7 text-blue-600" />

@@ -51,7 +51,7 @@ export function HowItWorks() {
               <motion.div
                 key={step.id}
           
-                className="bg-pironi-cream rounded-[2rem] p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 group"
+                className="bg-pironi-cream rounded-[3rem] p-8 shadow-black/10  text-center shadow-2xl hover:shadow-xl transition-all duration-300 group"
               >
                 <div className="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform duration-300 border-4 border-pironi-cream">
                   <step.icon className="h-8 w-8 text-pironi-yellow-dark" />
