@@ -50,10 +50,7 @@ export function HowItWorks() {
             {steps.map((step, index) => (
               <motion.div
                 key={step.id}
-                initial={{  filter: 'blur(8px)' }}
-                whileInView={{  filter: 'blur(0px)' }}
-             viewport={{once:true}}
-                transition={{ type: 'spring', stiffness: 50+(index*10) ,damping: 20}}
+          
                 className="bg-pironi-cream rounded-[2rem] p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 group"
               >
                 <div className="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform duration-300 border-4 border-pironi-cream">
