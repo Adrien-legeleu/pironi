@@ -18,11 +18,11 @@ export function SiteHeader() {
   })
 
   const navLinks = [
-    { name: "Accueil", href: "#hero" },
-    { name: "Services", href: "#services" },
-    { name: "Engagements", href: "#values" },
-    { name: "Demande de devis", href: "#quote" },
-    { name: "Contact", href: "#footer" },
+    { name: "Accueil", href: "/#hero" },
+    { name: "Services", href: "/#services" },
+    { name: "Engagements", href: "/#values" },
+    { name: "Demande de devis", href: "/#quote" },
+    { name: "Contact", href: "/#footer" },
   ]
 
   return (

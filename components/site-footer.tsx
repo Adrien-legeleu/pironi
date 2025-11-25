@@ -36,17 +36,17 @@ export function SiteFooter() {
             <h3 className="text-white font-bold mb-6">Navigation</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="#hero" className="text-gray-400 hover:text-pironi-yellow transition-colors">
+                <Link href="/#hero" className="text-gray-400 hover:text-pironi-yellow transition-colors">
                   Accueil
                 </Link>
               </li>
               <li>
-                <Link href="#services" className="text-gray-400 hover:text-pironi-yellow transition-colors">
+                <Link href="/#services" className="text-gray-400 hover:text-pironi-yellow transition-colors">
                   Nos services
                 </Link>
               </li>
               <li>
-                <Link href="#values" className="text-gray-400 hover:text-pironi-yellow transition-colors">
+                <Link href="/#values" className="text-gray-400 hover:text-pironi-yellow transition-colors">
                   Nos engagements
                 </Link>
               </li>
@@ -63,20 +63,11 @@ export function SiteFooter() {
             <h3 className="text-white font-bold mb-6">Informations</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="#" className="text-gray-400 hover:text-pironi-yellow transition-colors">
+                <Link href="/mentions-legales" className="text-gray-400 hover:text-pironi-yellow transition-colors">
                   Mentions légales
                 </Link>
               </li>
-              <li>
-                <Link href="#" className="text-gray-400 hover:text-pironi-yellow transition-colors">
-                  Politique de confidentialité
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-gray-400 hover:text-pironi-yellow transition-colors">
-                  CGV
-                </Link>
-              </li>
+           
             </ul>
           </div>
         </div>
