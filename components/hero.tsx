@@ -86,7 +86,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
           className="hidden lg:block relative"
         >
-          <div className="bg-pironi-cream/95 backdrop-blur-sm p-8 rounded-[2rem] shadow-2xl max-w-md ml-auto border border-white/10">
+          <div className="bg-pironi-cream/95 backdrop-blur-sm p-8 rounded-[3rem] shadow-2xl max-w-md ml-auto border border-white/10">
             <div className="flex items-center gap-4 mb-6">
               <div className="h-12 w-12 bg-pironi-yellow rounded-full flex items-center justify-center">
                 <ShieldCheck className="h-6 w-6 text-pironi-dark" />
