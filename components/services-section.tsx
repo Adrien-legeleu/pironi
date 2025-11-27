@@ -49,10 +49,7 @@ export function ServicesSection() {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+             
 
               className="group relative flex flex-col justify-between bg-white rounded-[3rem] p-8 border border-pironi-dark/5 transition-all duration-300"
             >
