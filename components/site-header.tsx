@@ -27,9 +27,18 @@ export function SiteHeader() {
       <div className="max-w-5xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <div className="relative h-10 w-auto aspect-[3/2]">
+          <div className="relative h-10 lg:hidden w-auto aspect-[3/2]">
             <Image
               src="/pironi/Logo_NoirRouge_CMJN.png"
+              alt="Pironi Logo"
+              fill
+              className="object-cover rounded-2xl object-left"
+              priority
+            />
+          </div>
+          <div className="relative h-10 max-lg:hidden w-auto aspect-[3/2]">
+            <Image
+              src="/pironi/Logo_DoréSurViolet_CMJN.png"
               alt="Pironi Logo"
               fill
               className="object-cover rounded-2xl object-left"

@@ -88,7 +88,7 @@ export function Hero() {
 
   return (
     <section id="hero" className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-pironi-dark">
-      <div className="absolute inset-0 bg-gradient-to-br from-pironi-bordeaux/[0.1] via-transparent to-pironi-yellow/[0.05] blur-3xl" />
+      <div className="absolute inset-0 bg-gradient-to-br from-pironi-dark/[0.05] via-transparent to-pironi-dark/[0.05] blur-3xl" />
 
       <div className="absolute inset-0 overflow-hidden">
         <ElegantShape

@@ -20,6 +20,7 @@ export function SiteFooter() {
               Transport de marchandises, mobilité sans permis et chauffeur privé.
               Votre partenaire mobilité de confiance.
             </p>
+            <Image src="/pironi/Plaque_DoréSurViolet_CMJN.png" alt="Logo" width={200} height={200} className="w-full rounded-2xl " />
           </div>
 
           {/* Contact Column */}
@@ -28,7 +29,7 @@ export function SiteFooter() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-pironi-cream/80">
                 <Phone className="h-5 w-5 text-pironi-yellow mt-0.5" />
-                <span>01 23 45 67 89</span>
+                <span>06 59 31 69 91</span>
               </li>
               <li className="flex items-start gap-3 text-pironi-cream/80">
                 <Mail className="h-5 w-5 text-pironi-yellow mt-0.5" />

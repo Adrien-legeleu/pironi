@@ -1,35 +1,172 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Car, Truck, UserCheck, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
-const services = [
-  {
-    icon: Car,
-    title: "Pironi sans permis",
-    description: "Location de véhicules sans permis pour vos déplacements quotidiens. Une solution flexible et accessible à tous.",
-    link: "#devis",
-  },
-  {
-    icon: Truck,
-    title: "Transport de marchandises",
-    description: "Transport express et sécurisé de vos marchandises. Nous assurons une livraison rapide et soignée.",
-    badge: "Devis sous 24h",
-    link: "#devis",
-  },
-  {
-    icon: UserCheck,
-    title: "Pironi vous conduit",
-    description: "Service de chauffeur privé pour vos trajets professionnels ou personnels. Confort et discrétion garantis.",
-    link: "#devis",
-  },
-];
+const BGComponent1 = () => (
+  <motion.svg
+    width="320"
+    height="384"
+    viewBox="0 0 320 384"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    variants={{ hover: { scale: 1.5 } }}
+    transition={{ duration: 1, ease: "backInOut" }}
+    className="absolute inset-0 z-0"
+  >
+    <motion.circle
+      variants={{ hover: { scaleY: 0.5, y: -25 } }}
+      transition={{ duration: 1, ease: "backInOut", delay: 0.2 }}
+      cx="160.5"
+      cy="114.5"
+      r="101.5"
+      fill="rgba(255, 255, 255, 0.1)"
+    />
+    <motion.ellipse
+      variants={{ hover: { scaleY: 2.25, y: -25 } }}
+      transition={{ duration: 1, ease: "backInOut", delay: 0.2 }}
+      cx="160.5"
+      cy="265.5"
+      rx="101.5"
+      ry="43.5"
+      fill="rgba(255, 255, 255, 0.1)"
+    />
+  </motion.svg>
+);
+
+const BGComponent2 = () => (
+  <motion.svg
+    width="320"
+    height="384"
+    viewBox="0 0 320 384"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    variants={{ hover: { scale: 1.05 } }}
+    transition={{ duration: 1, ease: "backInOut" }}
+    className="absolute inset-0 z-0"
+  >
+    <motion.rect
+      x="14"
+      width="153"
+      height="153"
+      rx="15"
+      fill="rgba(255, 255, 255, 0.1)"
+      variants={{ hover: { y: 219, rotate: "90deg", scaleX: 2 } }}
+      style={{ y: 12 }}
+      transition={{ delay: 0.2, duration: 1, ease: "backInOut" }}
+    />
+    <motion.rect
+      x="155"
+      width="153"
+      height="153"
+      rx="15"
+      fill="rgba(255, 255, 255, 0.1)"
+      variants={{ hover: { y: 12, rotate: "90deg", scaleX: 2 } }}
+      style={{ y: 219 }}
+      transition={{ delay: 0.2, duration: 1, ease: "backInOut" }}
+    />
+  </motion.svg>
+);
+
+const BGComponent3 = () => (
+  <motion.svg
+    width="320"
+    height="384"
+    viewBox="0 0 320 384"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    variants={{ hover: { scale: 1.25 } }}
+    transition={{ duration: 1, ease: "backInOut" }}
+    className="absolute inset-0 z-0"
+  >
+    <motion.path
+      variants={{ hover: { y: -50 } }}
+      transition={{ delay: 0.3, duration: 1, ease: "backInOut" }}
+      d="M148.893 157.531C154.751 151.673 164.249 151.673 170.107 157.531L267.393 254.818C273.251 260.676 273.251 270.173 267.393 276.031L218.75 324.674C186.027 357.397 132.973 357.397 100.25 324.674L51.6068 276.031C45.7489 270.173 45.7489 260.676 51.6068 254.818L148.893 157.531Z"
+      fill="rgba(255, 255, 255, 0.1)"
+    />
+    <motion.path
+      variants={{ hover: { y: -50 } }}
+      transition={{ delay: 0.2, duration: 1, ease: "backInOut" }}
+      d="M148.893 99.069C154.751 93.2111 164.249 93.2111 170.107 99.069L267.393 196.356C273.251 202.213 273.251 211.711 267.393 217.569L218.75 266.212C186.027 298.935 132.973 298.935 100.25 266.212L51.6068 217.569C45.7489 211.711 45.7489 202.213 51.6068 196.356L148.893 99.069Z"
+      fill="rgba(255, 255, 255, 0.1)"
+    />
+    <motion.path
+      variants={{ hover: { y: -50 } }}
+      transition={{ delay: 0.1, duration: 1, ease: "backInOut" }}
+      d="M148.893 40.6066C154.751 34.7487 164.249 34.7487 170.107 40.6066L267.393 137.893C273.251 143.751 273.251 153.249 267.393 159.106L218.75 207.75C186.027 240.473 132.973 240.473 100.25 207.75L51.6068 159.106C45.7489 153.249 45.7489 143.751 51.6068 137.893L148.893 40.6066Z"
+      fill="rgba(255, 255, 255, 0.1)"
+    />
+  </motion.svg>
+);
+
+const ServiceCard = ({
+  label,
+  title,
+  subtitle,
+  description,
+  cta,
+  background,
+  BGComponent,
+  link,
+  rotate = 0,
+}: {
+  label: string;
+  title: string;
+  subtitle?: string;
+  description: string;
+  cta: string;
+  background: string;
+  BGComponent: React.ComponentType;
+  link: string;
+  rotate?: number;
+}) => {
+  return (
+    <motion.div
+      initial={{ rotate: rotate }}
+      whileHover="hover"
+      transition={{ duration: 1, ease: "backInOut" }}
+      variants={{ hover: { scale: 1.05, rotate: 0 } }}
+      className={`relative h-[450px] w-full max-w-[350px] shrink-0 overflow-hidden rounded-[2.5rem] p-8 ${background} ${rotate ? `rotate-${rotate}` : ""} shadow-xl hover:shadow-2xl transition-shadow flex flex-col justify-between`}
+    >
+      <div className="relative z-10 text-white h-full flex flex-col">
+        <span className="mb-4 block w-fit rounded-full bg-white/20 backdrop-blur-sm px-4 py-1 text-xs font-bold text-white border border-white/20 uppercase tracking-wider">
+          {label}
+        </span>
+        <motion.div
+          initial={{ scale: 0.9 }}
+          variants={{ hover: { scale: 1 } }}
+          transition={{ duration: 1, ease: "backInOut" }}
+          className="mb-6 origin-top-left"
+        >
+          <h3 className="font-pironi-script text-5xl leading-[1.1] mb-2">
+            {title}
+          </h3>
+          {subtitle && (
+            <span className="text-xl font-light opacity-90 block">{subtitle}</span>
+          )}
+        </motion.div>
+        
+        <p className="text-lg text-white/90 leading-relaxed font-light">
+          {description}
+        </p>
+      </div>
+
+      <Link href={link} className="relative z-20 w-full">
+        <button className="w-full rounded-xl border-2 border-white bg-white py-3 text-center font-bold uppercase text-pironi-dark backdrop-blur-sm transition-all duration-200 hover:bg-white/10 hover:text-white hover:border-white/80 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent">
+          {cta}
+        </button>
+      </Link>
+      
+      <BGComponent />
+    </motion.div>
+  );
+};
 
 export function ServicesSection() {
   return (
-    <section id="services" className="relative w-full py-24 bg-pironi-cream">
-      <div className="container max-w-6xl mx-auto px-4 md:px-6">
+    <section id="services" className="relative w-full py-24 bg-pironi-cream overflow-hidden">
+      <div className="container max-w-7xl mx-auto px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -45,49 +182,40 @@ export function ServicesSection() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-           
-              className="group relative flex flex-col justify-between bg-white rounded-[3rem] p-10 shadow-[20px_20px_40px_rgba(0,0,0,0.05),-20px_-20px_40px_rgba(255,255,255,0.8)] hover:shadow-[20px_20px_60px_rgba(0,0,0,0.08),-20px_-20px_60px_rgba(255,255,255,1)] transition-all duration-500 aspect-[4/5] md:aspect-[3/4] lg:aspect-[4/5]"
-            >
-              <div>
-                {/* Icon Block */}
-                <div className="mb-8 inline-flex h-20 w-20 items-center justify-center rounded-[2rem] bg-pironi-cream text-pironi-dark group-hover:bg-pironi-yellow group-hover:scale-110 transition-all duration-500">
-                  <service.icon className="h-10 w-10" />
-                </div>
-
-                {/* Content */}
-                <div className="mb-6 relative z-10">
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-3xl font-bold text-pironi-dark font-pironi-serif leading-tight">
-                      {service.title}
-                    </h3>
-                  </div>
-                  {service.badge && (
-                    <span className="inline-block mb-4 rounded-full bg-pironi-yellow/10 px-4 py-1.5 text-xs font-semibold text-pironi-yellow-dark tracking-wide uppercase">
-                      {service.badge}
-                    </span>
-                  )}
-                  <p className="text-pironi-dark/60 leading-relaxed text-lg font-light">
-                    {service.description}
-                  </p>
-                </div>
-              </div>
-
-              {/* Action */}
-              <div className="pt-8 border-t border-pironi-dark/5 relative z-10">
-                <Link
-                  href={service.link}
-                  className="inline-flex items-center text-base font-medium text-pironi-dark group-hover:text-pironi-yellow-dark transition-colors"
-                >
-                  En savoir plus
-                  <ArrowRight className="ml-3 h-5 w-5 transition-transform group-hover:translate-x-2" />
-                </Link>
-              </div>
-            </motion.div>
-          ))}
+        <div className="flex flex-wrap justify-center gap-8 md:gap-12 pt-10 pb-10">
+          <ServiceCard
+            label="Location"
+            title="Sans Permis"
+            subtitle="Liberté & Flexibilité"
+            description="Location de véhicules sans permis pour vos déplacements quotidiens. Une solution flexible et accessible à tous."
+            cta="En savoir plus"
+            background="bg-[#242B33]"
+            BGComponent={BGComponent1}
+            link="#devis"
+            rotate={-1}
+          />
+          <ServiceCard
+            label="Logistique"
+            title="Transport"
+            subtitle="Marchandises & Express"
+            description="Transport express et sécurisé de vos marchandises. Nous assurons une livraison rapide et soignée."
+            cta="En savoir plus"
+            background="bg-pironi-bordeaux"
+            BGComponent={BGComponent2}
+            link="#devis"
+            rotate={3}
+          />
+          <ServiceCard
+            label="Premium"
+            title="Chauffeur"
+            subtitle="Privé & VTC"
+            description="Service de chauffeur privé pour vos trajets professionnels ou personnels. Confort et discrétion garantis."
+            cta="En savoir plus"
+            background="bg-pironi-dark"
+            BGComponent={BGComponent3}
+            link="#devis"
+            rotate={-5}
+          />
         </div>
       </div>
     </section>
