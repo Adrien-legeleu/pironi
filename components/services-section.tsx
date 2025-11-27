@@ -49,10 +49,7 @@ export function ServicesSection() {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+           
               className="group relative flex flex-col justify-between bg-white rounded-[3rem] p-10 shadow-[20px_20px_40px_rgba(0,0,0,0.05),-20px_-20px_40px_rgba(255,255,255,0.8)] hover:shadow-[20px_20px_60px_rgba(0,0,0,0.08),-20px_-20px_60px_rgba(255,255,255,1)] transition-all duration-500 aspect-[4/5] md:aspect-[3/4] lg:aspect-[4/5]"
             >
               <div>
