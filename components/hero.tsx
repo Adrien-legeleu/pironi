@@ -99,6 +99,14 @@ export function Hero() {
           gradient="from-pironi-bordeaux/[0.2]"
           className="left-[-10%] md:left-[-5%] max-md:hidden top-[15%] md:top-[20%]"
         />
+        <ElegantShape
+          delay={0.3}
+          width={400}
+          height={90}
+          rotate={12}
+          gradient="from-pironi-bordeaux/[0.2]"
+          className="left-[-5%]  md:hidden top-[35%]"
+        />
 
         <ElegantShape
           delay={0.5}
@@ -124,7 +132,7 @@ export function Hero() {
           height={60}
           rotate={20}
           gradient="from-pironi-yellow/[0.15]"
-          className="right-[15%] md:right-[20%] top-[10%] md:top-[15%]"
+          className="right-[10%] md:right-[20%] top-[10%] md:top-[15%]"
         />
 
         <ElegantShape
@@ -133,7 +141,7 @@ export function Hero() {
           height={40}
           rotate={-25}
           gradient="from-pironi-bordeaux/[0.2]"
-          className="left-[20%] md:left-[25%] top-[5%] md:top-[10%]"
+          className="left-[5%] md:left-[25%] top-[5%] md:top-[10%]"
         />
       </div>
 
