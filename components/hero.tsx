@@ -144,9 +144,9 @@ export function Hero() {
             variants={fadeUpVariants}
             initial="hidden"
             animate="visible"
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.08] mb-8 md:mb-12"
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.03] backdrop-blur-[4px] border border-white/[0.08] mb-8 md:mb-12"
           >
-            <Circle className="h-2 w-2 fill-pironi-yellow" />
+            <Circle className="sm:h-2 sm:w-2 h-1.5 w-1.5 fill-pironi-yellow" />
             <span className="md:text-sm  sm:text-xs text-[9px] text-white/70 tracking-wide uppercase">
               Transport de marchandises & mobilité sur mesure
             </span>
@@ -187,14 +187,14 @@ export function Hero() {
           >
              <Button
                 asChild
-                className="bg-pironi-yellow text-pironi-dark rounded-full px-8 py-6 text-base font-semibold hover:bg-pironi-yellow-dark transition-all shadow-[0_0_20px_-5px_rgba(255,195,0,0.4)] w-full md:w-auto"
+                className="bg-pironi-yellow text-pironi-dark rounded-[1.3rem] px-8 py-6 text-base font-semibold hover:bg-pironi-yellow-dark transition-all shadow-[0_0_20px_-5px_rgba(255,195,0,0.4)] w-full md:w-auto"
               >
                 <Link href="#devis">Demander un devis</Link>
               </Button>
               <Button
                 asChild
                 variant="ghost"
-                className="text-pironi-cream border border-white/20 rounded-full px-8 py-6 text-base hover:bg-white/10 hover:text-white transition-all w-full md:w-auto"
+                className="text-pironi-cream border border-white/20 rounded-[1.3rem] px-8 py-6 text-base hover:bg-white/10 hover:text-white transition-all w-full md:w-auto"
               >
                 <Link href="#services">Découvrir nos services</Link>
               </Button>

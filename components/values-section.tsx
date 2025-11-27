@@ -9,24 +9,28 @@ const values = [
     title: "Réactivité",
     description: "Nous répondons à vos demandes en moins de 24h et intervenons dans les plus brefs délais.",
     dark: true,
+    className: "md:col-span-2",
   },
   {
     icon: ShieldCheck,
     title: "Fiabilité",
     description: "Un service professionnel sur lequel vous pouvez compter, avec un suivi rigoureux.",
     dark: true,
+    className: "md:col-span-1",
   },
   {
     icon: Leaf,
     title: "Responsabilité",
     description: "Nous adoptons une conduite éco-responsable et optimisons nos trajets.",
     dark: false,
+    className: "md:col-span-1",
   },
   {
     icon: Lock,
     title: "Sécurité",
     description: "Vos marchandises et vos déplacements sont assurés et sécurisés à chaque étape.",
     dark: false,
+    className: "md:col-span-2",
   },
 ];
 
@@ -49,7 +53,7 @@ export function ValuesSection() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {values.map((value, index) => (
             <motion.div
               key={index}
@@ -57,11 +61,11 @@ export function ValuesSection() {
               whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className={`rounded-[3rem] p-8 md:p-10 flex flex-col gap-4 shadow-2xl shadow-black/5 ${
+              className={`rounded-[3rem] p-8 md:p-10 flex flex-col justify-between gap-4 shadow-2xl shadow-black/5 ${
                 value.dark
                   ? "bg-pironi-bordeaux text-pironi-cream"
                   : "bg-white text-pironi-dark"
-              }`}
+              } ${value.className}`}
             >
               <div
                 className={`h-12 w-12 rounded-full flex items-center justify-center ${

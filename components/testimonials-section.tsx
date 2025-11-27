@@ -264,8 +264,8 @@ export function TestimonialsSection() {
           <button
             onClick={() => handleMove(-1)}
             className={cn(
-              "flex h-14 w-14 items-center justify-center text-2xl transition-colors rounded-full",
-              "bg-white border-2 border-pironi-dark/10 cursor-pointer hover:brightness-95",
+              "flex h-14 w-14 items-center justify-center text-2xl transition-colors rounded-[1.5rem]",
+              "bg-white border-1 border-pironi-dark/4 cursor-pointer hover:brightness-99",
               "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pironi-yellow focus-visible:ring-offset-2"
             )}
             aria-label="Previous testimonial"
@@ -275,8 +275,8 @@ export function TestimonialsSection() {
           <button
             onClick={() => handleMove(1)}
             className={cn(
-              "flex h-14 w-14 items-center justify-center text-2xl transition-colors rounded-full",
-              "bg-white border-2 border-pironi-dark/10 cursor-pointer   hover:brightness-95",
+              "flex h-14 w-14 items-center justify-center text-2xl transition-colors rounded-[1.5rem]",
+              "bg-white border-1 border-pironi-dark/4 cursor-pointer   hover:brightness-99",
               "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pironi-yellow focus-visible:ring-offset-2"
             )}
             aria-label="Next testimonial"

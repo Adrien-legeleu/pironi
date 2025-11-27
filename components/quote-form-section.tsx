@@ -148,7 +148,7 @@ export function QuoteFormSection() {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="bg-pironi-yellow text-pironi-dark rounded-full px-10 py-6 text-base font-semibold hover:bg-pironi-yellow-dark transition-all shadow-lg shadow-pironi-yellow/20 w-full md:w-auto"
+                className="bg-pironi-yellow text-pironi-dark rounded-[1.3rem] px-10 py-6 text-base font-semibold hover:bg-pironi-yellow-dark transition-all shadow-lg shadow-pironi-yellow/20 w-full md:w-auto"
               >
                 {isSubmitting ? (
                   <>

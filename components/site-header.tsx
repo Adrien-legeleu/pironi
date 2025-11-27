@@ -56,7 +56,7 @@ export function SiteHeader() {
         <div className="hidden md:flex items-center gap-4">
           <Button
             asChild
-            className="bg-pironi-yellow text-pironi-dark rounded-full px-6 py-2 font-medium hover:bg-pironi-yellow-dark"
+            className="bg-pironi-yellow text-pironi-dark rounded-[1.3rem] px-6 py-2 font-medium hover:bg-pironi-yellow-dark"
           >
             <Link href="#devis">Demander un devis</Link>
           </Button>
@@ -102,7 +102,7 @@ export function SiteHeader() {
                 ))}
                 <Button
                   asChild
-                  className="mt-4 bg-pironi-yellow text-pironi-dark rounded-full w-full"
+                  className="mt-4 bg-pironi-yellow text-pironi-dark rounded-[1.3rem] w-full"
                 >
                   <Link href="#devis" onClick={() => setIsOpen(false)}>
                     Demander un devis
