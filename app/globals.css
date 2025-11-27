@@ -14,34 +14,26 @@
   --popover: 0 0% 100%;
   --popover-foreground: 240 29% 3%;
 
-  --primary: 46 100% 50%;
-  --primary-foreground: 240 29% 3%;
+  --primary: 0 95% 51%;
+  --primary-foreground: 0 0% 100%;
 
-  --secondary: 40 20% 87%;
-  --secondary-foreground: 240 29% 3%;
+  --secondary: 216 12% 16%;
+  --secondary-foreground: 0 0% 100%;
 
-  --muted: 40 20% 87%;
+  --muted: 216 12% 16%;
   --muted-foreground: 240 3.8% 46.1%;
 
-  --accent: 40 20% 87%;
-  --accent-foreground: 240 29% 3%;
+  --accent: 0 95% 51%;
+  --accent-foreground: 0 0% 100%;
 
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 98%;
 
-  --border: 40 20% 87%;
-  --input: 40 20% 87%;
-  --ring: 46 100% 50%;
+  --border: 216 12% 16%;
+  --input: 216 12% 16%;
+  --ring: 0 95% 51%;
 
   --radius: 0.5rem;
-
-  /* Pironi Colors */
-  --pironi-yellow: #FFC300;
-  --pironi-yellow-dark: #D99A00;
-  --pironi-bordeaux: #4B1F3A;
-  --pironi-dark: #050509;
-  --pironi-cream: #F8F4EF;
-  --pironi-muted: #E4DFD7;
 }
 
 @theme inline {
@@ -77,16 +69,25 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
 
-  --color-pironi-yellow: var(--pironi-yellow);
-  --color-pironi-yellow-dark: var(--pironi-yellow-dark);
-  --color-pironi-bordeaux: var(--pironi-bordeaux);
-  --color-pironi-dark: var(--pironi-dark);
-  --color-pironi-cream: var(--pironi-cream);
-  --color-pironi-muted: var(--pironi-muted);
+  /* Pironi Colors - Tailwind v4 syntax */
+  --color-pironi-yellow: #FFC300;
+  --color-pironi-yellow-dark: #D99A00;
+  --color-pironi-bordeaux: #4B1F3A;
+  --color-pironi-dark: #050509;
+  --color-pironi-cream: #F8F4EF;
+  --color-pironi-muted: #E4DFD7;
+
+  /* Font families */
+  --font-family-pironi-script: var(--font-pironi-script), cursive;
+  --font-family-pironi-serif: var(--font-pironi-serif), serif;
 }
 
 body {
-  background-color: var(--pironi-cream);
-  color: var(--pironi-dark);
-  font-family: var(--font-sans);
+  background-color: var(--color-pironi-cream);
+  color: rgb(23 23 23);
+  font-family: var(--font-pironi-serif);
+}
+
+h1, h2, h3, h4, h5, h6, label {
+  font-family: var(--font-pironi-script);
 }

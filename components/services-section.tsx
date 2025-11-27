@@ -1,99 +1,99 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Car, Truck, UserCheck, ArrowRight } from "lucide-react"
-import Link from "next/link"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
-// Badge import removed 
-// Actually I didn't install Badge. I'll use a styled div.
+import { motion } from "framer-motion";
+import { Car, Truck, UserCheck, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const services = [
   {
-    id: "sans-permis",
-    title: "Pironi sans permis",
-    description: "Location de véhicule sans permis pour vos déplacements quotidiens. Liberté et autonomie garanties.",
     icon: Car,
-    badge: null,
-    link: "#contact"
+    title: "Pironi sans permis",
+    description: "Location de véhicules sans permis pour vos déplacements quotidiens. Une solution flexible et accessible à tous.",
+    link: "#devis",
   },
   {
-    id: "transport",
-    title: "Transport de marchandises",
-    description: "Transport de colis, marchandises et petite logistique locale. Rapide et sécurisé.",
     icon: Truck,
+    title: "Transport de marchandises",
+    description: "Transport express et sécurisé de vos marchandises. Nous assurons une livraison rapide et soignée.",
     badge: "Devis sous 24h",
-    link: "#quote"
+    link: "#devis",
   },
   {
-    id: "chauffeur",
-    title: "Pironi vous conduit",
-    description: "Service de chauffeur privé pour vos trajets professionnels ou personnels. Confort et discrétion.",
     icon: UserCheck,
-    badge: null,
-    link: "#contact"
-  }
-]
+    title: "Pironi vous conduit",
+    description: "Service de chauffeur privé pour vos trajets professionnels ou personnels. Confort et discrétion garantis.",
+    link: "#devis",
+  },
+];
 
 export function ServicesSection() {
   return (
-    <section id="services" className="py-24 bg-pironi-cream">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="services" className="relative w-full py-24 bg-pironi-cream">
+      <div className="container max-w-6xl mx-auto px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-pironi-dark mb-4">Nos services de mobilité</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Des solutions adaptées à chaque besoin, pour les professionnels et les particuliers.
+          <h2 className="text-4xl md:text-5xl font-pironi-script text-pironi-dark mb-4">
+            Nos services de mobilité
+          </h2>
+          <p className="text-lg text-pironi-dark/70 max-w-2xl mx-auto font-medium">
+            Des solutions adaptées à chaque besoin, pour les particuliers et les professionnels.
           </p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <motion.div
-              key={service.id}
-              initial={{ opacity: 0, y: 40 }}
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -6 }}
+
+              className="group relative flex flex-col justify-between bg-white rounded-[3rem] p-8 border border-pironi-dark/5 transition-all duration-300"
             >
-              <Card className="h-full border-none shadow-2xl shadow-black/10  hover:shadow-xl transition-shadow duration-300 rounded-[3rem] overflow-hidden bg-white flex flex-col">
-                <CardHeader className="pb-4">
-                  <div className="w-14 h-14 bg-pironi-cream rounded-2xl flex items-center justify-center mb-6 text-pironi-yellow-dark">
-                    <service.icon className="h-8 w-8" />
+              <div>
+                {/* Icon Block */}
+                <div className="mb-8 inline-flex h-16 w-16 items-center justify-center rounded-3xl bg-pironi-cream text-pironi-dark group-hover:bg-pironi-yellow group-hover:scale-110 transition-all duration-300">
+                  <service.icon className="h-8 w-8" />
+                </div>
+
+                {/* Content */}
+                <div className="mb-6 bg-pironi-cream rounded-3xl p-6">
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="text-2xl font-bold text-pironi-dark font-pironi-serif">
+                      {service.title}
+                    </h3>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <CardTitle className="text-xl font-bold text-pironi-dark">{service.title}</CardTitle>
-                    {service.badge && (
-                      <span className="bg-pironi-yellow/20 text-pironi-yellow-dark text-xs font-bold px-2 py-1 rounded-full">
-                        {service.badge}
-                      </span>
-                    )}
-                  </div>
-                </CardHeader>
-                <CardContent className="flex-grow">
-                  <CardDescription className="text-base text-gray-600 leading-relaxed">
+                  {service.badge && (
+                    <span className="inline-block mb-3 absolute top-5 right-5 rounded-full bg-pironi-yellow/10 px-3 py-1 text-xs font-semibold text-pironi-yellow-dark">
+                      {service.badge}
+                    </span>
+                  )}
+                  <p className="text-pironi-dark/70 leading-relaxed text-base">
                     {service.description}
-                  </CardDescription>
-                </CardContent>
-                <CardFooter className="pt-4 border-t border-gray-50">
-                  <Link 
-                    href={service.link} 
-                    className="group flex items-center text-sm font-semibold text-pironi-dark hover:text-pironi-yellow-dark transition-colors"
-                  >
-                    En savoir plus
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </Link>
-                </CardFooter>
-              </Card>
+                  </p>
+                </div>
+              </div>
+
+              {/* Action */}
+              <div className="pt-6 border-t border-pironi-dark/5">
+                <Link
+                  href={service.link}
+                  className="inline-flex items-center bg-pironi-cream px-5 py-3 rounded-3xl text-sm font-bold text-pironi-dark group-hover:text-pironi-yellow-dark transition-colors"
+                >
+                  En savoir plus
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </div>
             </motion.div>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }

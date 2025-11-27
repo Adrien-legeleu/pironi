@@ -7,7 +7,7 @@ import { QuoteFormSection } from "@/components/quote-form-section";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-0">
+    <div className="flex flex-col min-h-screen">
       <Hero />
       <ServicesSection />
       <HowItWorks />

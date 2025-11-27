@@ -6,6 +6,7 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  // Pour Tailwind v4, la configuration des couleurs se fait dans globals.css avec @theme
   theme: {
     extend: {},
   },
