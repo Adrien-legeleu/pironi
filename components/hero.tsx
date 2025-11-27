@@ -147,7 +147,7 @@ export function Hero() {
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.08] mb-8 md:mb-12"
           >
             <Circle className="h-2 w-2 fill-pironi-yellow" />
-            <span className="md:text-sm  sm:text-xs text-[9px] text-white/60 tracking-wide uppercase">
+            <span className="md:text-sm  sm:text-xs text-[9px] text-white/70 tracking-wide uppercase">
               Transport de marchandises & mobilité sur mesure
             </span>
           </motion.div>
@@ -173,7 +173,7 @@ export function Hero() {
             initial="hidden"
             animate="visible"
           >
-            <p className="text-base sm:text-lg md:text-xl text-white/60 mb-10   leading-relaxed font-light tracking-wide max-w-2xl mx-auto px-4">
+            <p className="text-base sm:text-lg md:text-xl text-white/70 mb-10   leading-relaxed font-light tracking-wide max-w-2xl mx-auto px-4">
               Pironi vous accompagne pour le transport de vos marchandises, vos déplacements sans permis et vos trajets avec chauffeur privé, en toute sérénité.
             </p>
           </motion.div>
