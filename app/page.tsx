@@ -1,8 +1,8 @@
 import { Hero } from "@/components/hero";
 import { ServicesSection } from "@/components/services-section";
 import { HowItWorks } from "@/components/how-it-works";
-import { ValuesSection } from "@/components/values-section";
 import { TestimonialsSection } from "@/components/testimonials-section";
+import { QuickContactSection } from "@/components/quick-contact-section";
 import { QuoteFormSection } from "@/components/quote-form-section";
 
 export default function Home() {
@@ -11,8 +11,8 @@ export default function Home() {
       <Hero />
       <ServicesSection />
       <HowItWorks />
-      <ValuesSection />
       <TestimonialsSection />
+      <QuickContactSection />
       <QuoteFormSection />
     </div>
   );
