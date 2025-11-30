@@ -1,25 +1,25 @@
 import type { Metadata } from "next";
-import { Great_Vibes, Cormorant_Garamond } from "next/font/google";
+import { Poppins, Libre_Baskerville } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Toaster } from "@/components/ui/sonner";
 
-const greatVibes = Great_Vibes({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-pironi-script",
-});
-
-const cormorantGaramond = Cormorant_Garamond({
+const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-pironi-serif",
+  variable: "--font-sans",
+});
+
+const libreBaskerville = Libre_Baskerville({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-serif",
 });
 
 export const metadata: Metadata = {
-  title: "Pironi - Mobilité sans limite",
-  description: "Transport de marchandises, location de véhicules sans permis et chauffeur privé.",
+  title: "Pironi - Services de mobilité sur mesure",
+  description: "Location sans permis, transport logistique et chauffeur privé. Une même exigence de sérieux, de confort et de flexibilité.",
 };
 
 export default function RootLayout({
@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="fr" className="scroll-smooth">
       <body
-        className={`${greatVibes.variable} ${cormorantGaramond.variable} bg-pironi-cream text-neutral-900 antialiased [font-family:var(--font-pironi-serif)] min-h-screen flex flex-col`}
+        className={`${poppins.variable} ${libreBaskerville.variable} bg-background text-foreground antialiased min-h-screen flex flex-col`}
       >
         <SiteHeader />
         <main className="flex-grow">{children}</main>
